@@ -1,0 +1,8 @@
+mixin icon(className)
+  i.fa(class=className aria-hidden='true')
+
+mixin option
+  - var n = 0
+  while n < 5
+    - var t = 'Lorem - ' + n++
+    option= t

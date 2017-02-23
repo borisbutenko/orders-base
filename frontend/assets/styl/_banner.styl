@@ -1,0 +1,29 @@
+.banner
+  position: relative
+  width: 100%
+  display: inline-block
+  padding: 3rem 0 3rem 8.5rem
+  background: url(../img/banner-bcg.png) no-repeat 50%,
+              linear-gradient(90deg, #0078a6, #619eba)
+  background-size: cover
+  color: #fff
+  &__border
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(100% - 2rem)
+    height: calc(100% - 2rem)
+    border: .3rem solid #fff
+    margin: 1rem
+  &__title
+    font-size: 2.5rem
+    margin-bottom: 2rem
+  &__button
+    text-transform: uppercase
+    border: .2rem solid #fff
+    padding-right: 3.5rem
+    position: absolute
+    top: 2.5rem
+    left: 0
+    & > i.fa
+      margin-right: 1rem

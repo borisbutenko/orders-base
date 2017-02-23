@@ -1,0 +1,51 @@
+- var menu  = [{n : 'главная', u : '#0', s : null}, {n : 'разместить груз', u : '#0', s : [{n : 'lorem 1', u : '#0'}, {n : 'lorem 2', u : '#0'}, {n : 'lorem 3', u : '#0'}]}, {n : 'база заказов', u : 'orders-base.html', s : null}, {n : 'перевозчикам', u : '#0', s : null}, {n : 'информация', u : '#0', s : null}, {n : 'новости', u : '#0', s : null}]
+- var icons = [{c : 'fa-star', u : '#0'}, {c : 'fa-briefcase', u : '#0'}, {c : 'fa-user', u : '#0'}, {c : 'fa-bell', u : '#0'}, {c : 'fa-gavel', u : '#0'}, {c : 'fa-truck', u : '#0'}]
+
+header.header
+  .header__panel
+    .container
+      .row
+        .col-md-3.col-sm-5.col-xs-3
+          a(href='orders-base.html').logo.clearfix
+            img.logo__image(src='assets/img/logo.png' alt='logo')
+            h2.logo__title Биржа грузоперевозок<br>ekonomte.com.ru
+        .col-md-offset-4.col-md-5.col-sm-7.col-xs-9
+          .col-md-6.col-sm-6.col-xs-10
+            .header__icon-menu
+              ul.icon-menu.clearfix
+                each icon in icons
+                  li.icon-menu__item
+                    a(href=icon.u).icon-menu__link
+                      i.fa(class=icon.c aria-hidden='true')
+          .col-md-5.col-sm-5.hidden-xs
+            .header__user.user-header
+              img(src='assets/img/logo__user.png' alt='logo').user-header__logo
+              a(href='#0').user-header__name victor gray
+              p.user-header__role перевозчик
+          .col-md-1.col-sm-1.col-xs-1
+            .header__logout
+              a(href='#0').icon-menu__link
+                i.fa.fa-sign-out(aria-hidden='true')
+  .header__menu
+    .container
+      .row
+        .menu-main
+          nav.menu-main__nav
+            .navbar-header
+              button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#menu-main' aria-expanded='false')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            #menu-main.collapse.navbar-collapse
+              ul.menu-main__list.pull-right.clearfix
+                each item in menu
+                  if ( !item.s )
+                    li.menu-main__item
+                      a.menu-main__link(href=item.u)= item.n
+                  else
+                    li.menu-main__item
+                      a.menu-main__link(href=item.u)= item.n
+                      ul.menu-main__list.menu-main__list-dropdown
+                        each s in item.s
+                          li.menu-main__item.menu-main__item-dropdown
+                            a.menu-main__link.menu-main__link-dropdown(href=s.u)= s.n

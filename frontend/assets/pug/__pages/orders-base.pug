@@ -1,0 +1,194 @@
+extends ../base
+block main
+  .container
+    .row
+      section.section.section-banner
+        include ../__blocks/orders-banner
+  .container
+    .row
+      .orders.clearfix
+        .col-md-3.col-sm-4.col-xs-12
+          h3.orders__title Поиск грузов по России и СНГ
+          aside.aside.aside-orders.shadow
+            .aside__row
+              h3.aside__title Поиск
+            .aside__row
+              a.button.button-blue.aside-orders__button(href='#0')
+                | По номеру заказа
+                +icon('fa-search')
+            ul.tablist(role='tablist')
+              li.tablist__item.active(role='search')
+                a.tablist__link(href='#region' aria-controls='region' role='tab' data-toggle='tab') По региону
+              li.tablist__item(role='search')
+                a.tablist__link(href='#route' aria-controls='route' role='tab' data-toggle='tab') По маршруту
+            .tab-content
+              #region.tab-pane.active(role='tabpanel')
+                .aside__row
+                  label.label(for='orders-country') Область (регион):
+                  select#orders-country.select(data-select)
+                    option(selected) Россия
+                    +option
+                  select.select(data-select)
+                    option(selected) Московкая область
+                    +option
+                .aside__row
+                  label.label(for='orders-category') Категория груза:
+                  select#orders-category.select(data-select)
+                    option(selected) Выберите категорию
+                    +option
+                .aside__row
+                  label.label(for='orders-distance') Расстояние (км):
+                  #orders-distance
+                .aside__row
+                  .clearfix
+                    input#orders-weight.input-radio(type='radio' name='weight')
+                    label.label.label-pull.pull-left(for='orders-weight') Вес (кг):
+                      span.span-radio
+                        span.span-radio__checked
+                    input#orders-no-weight.input-radio(type='radio' name='weight' checked)
+                    label.label.label-pull.pull-right(for='orders-no-weight') Вес не указан
+                      span.span-radio
+                        span.span-radio__checked
+                  #orders-weight-distance
+                .aside__row
+                  label.label(for='orders-daterange') Дата перевозки:
+                  .aside__datetimepicker
+                    input#orders-daterange.input(type='text' name='daterange')
+                    +icon('fa-calendar icon-daterange')
+              #route.tab-pane(role='tabpanel')
+                .aside__row
+                  label.label(for='orders-country-from') Откуда:
+                  select#orders-country-from.select(data-select)
+                    option(selected) Россия
+                    +option
+                  select.select(data-select)
+                    option(selected) Московкая область
+                    +option
+                .aside__row
+                  label.label(for='orders-country-to') Куда:
+                  select#orders-country-to.select(data-select)
+                    option(selected) Россия
+                    +option
+                  select.select(data-select)
+                    option(selected) Московкая область
+                    +option
+                .aside__row
+                  label.label(for='orders-category-route') Категория груза:
+                  select#orders-category-route.select(data-select)
+                    option(selected) Выберите категорию
+                    +option
+                .aside__row
+                  label.label(for='orders-distance-route') Расстояние (км):
+                  #orders-distance-route
+                .aside__row
+                  .clearfix
+                    input#orders-weight-route.input-radio(type='radio' name='weight-route')
+                    label.label.label-pull.pull-left(for='orders-weight-route') Вес (кг):
+                      span.span-radio
+                        span.span-radio__checked
+                    input#orders-no-weight-route.input-radio(type='radio' name='weight-route' checked)
+                    label.label.label-pull.pull-right(for='orders-no-weight-route') Вес не указан
+                      span.span-radio
+                        span.span-radio__checked
+                  #orders-weight-distance-route
+                .aside__row
+                  label.label(for='orders-daterange-route') Дата перевозки:
+                  .aside__datetimepicker
+                    input#orders-daterange-route.input(type='text' name='daterange')
+                    +icon('fa-calendar icon-daterange')
+        .col-md-9.col-sm-8.col-xs-12
+          .orders__sort.clearfix
+            .pull-left
+              span.orders__text Сортировка:
+              a.orders__link.orders__link-active(href='#0') Актуальные (999+)
+              a.orders__link(href='#0') Срочные (999+)
+              a.orders__link(href='#0') Выполненные (999+)
+              a.orders__link(href='#0') Все (999+)
+            .pull-right
+              input#orders-unrate.input-radio(type='radio' name='' checked)
+              label.label(for='orders-unrate') Без ставок
+                span.span-radio
+                  span.span-radio__checked
+              input#orders-blank.input-radio(type='radio' name='' checked)
+              label.label(for='orders-blank') Открывать в новой вкладке
+                span.span-radio
+                  span.span-radio__checked
+          section.section.section-orders.shadow
+            img.section-orders__logo(src='assets/img/logo__order.png' alt='logo')
+            a(href='#0').section-orders__star.pull-right
+              +icon('fa-star-o')
+            .section-orders__timer.pull-right
+              +icon('fa-clock-o')
+              span 55м
+            .row
+              .col-md-6.col-sm-6.col-xs-12
+                h2.section-orders__title
+                  a.section-orders__link(href='#0') [2141] Квартирный&nbsp;
+                  | переезд
+                  +icon('fa-circle')
+                span.section-orders__publish Опубликован <strong>сегодня</strong>
+                span.section-orders__rate 99 ставок
+                p.section-orders__par
+                  label.section-orders__label Откуда:
+                  span.section-orders__for Москва, Московская область
+                p.section-orders__par
+                  label.section-orders__label Куда:
+                  span.section-orders__for Москва, Московская область
+                p.section-orders__par
+                  label.section-orders__label Расстояние:
+                  span.section-orders__for 1700 км
+              .col-md-6.col-sm-6.col-xs-12
+                .section-orders__status
+                  p.section-orders__status-par
+                    +icon('fa-calendar')
+                    | с
+                    span 21.12.2016
+                    | до
+                    span 28.12.2016
+                  p.section-orders__status-par
+                    +icon('fa-balance-scale')
+                    | Не определен
+                  p.section-orders__status-par
+                    +icon('fa-arrows-alt')
+                    | Не определен
+          - var n = 0
+          while n < 3
+            section.section.section-orders.shadow
+              img.section-orders__logo(src='assets/img/logo__order.png' alt='logo')
+              a(href='#0').section-orders__star.pull-right
+                +icon('fa-star-o')
+              .section-orders__timer.pull-right
+                +icon('fa-clock-o')
+                span 55м
+              .row
+                .col-md-6.col-sm-6.col-xs-12
+                  h2.section-orders__title
+                    a.section-orders__link(href='#0') [2141] Квартирный&nbsp;
+                    | переезд
+                    +icon('fa-circle-o')
+                  span.section-orders__publish Опубликован <strong>сегодня</strong>
+                  span.section-orders__rate 99 ставок
+                  p.section-orders__par
+                    label.section-orders__label Откуда:
+                    span.section-orders__for Москва, Московская область
+                  p.section-orders__par
+                    label.section-orders__label Куда:
+                    span.section-orders__for Москва, Московская область
+                  p.section-orders__par
+                    label.section-orders__label Расстояние:
+                    span.section-orders__for 1700 км
+                .col-md-6.col-sm-6.col-xs-12.clearfix
+                  .section-orders__status
+                    p.section-orders__status-par
+                      +icon('fa-calendar')
+                      | с
+                      span 21.12.2016
+                      | до
+                      span 28.12.2016
+                    p.section-orders__status-par
+                      +icon('fa-balance-scale')
+                      | Не определен
+                    p.section-orders__status-par
+                      +icon('fa-arrows-alt')
+                      | Не определен
+            - n++

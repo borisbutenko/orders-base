@@ -1,0 +1,11 @@
+#sms.modal.fade(tabindex="-1" role="dialog" aria-labelledby="sms-title")
+  .modal-dialog.modal-sm(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        h2.modal-title(id="sms-title") Хотите выполнять больше заказов?
+      .modal-body
+        p Рассылка уведомлений о новых задачах и комментариях по СМС. Хотите активировать рассылку?
+      .modal-footer
+        a.button.button-orange(href='#0') ХОЧУ!
