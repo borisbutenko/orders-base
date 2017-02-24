@@ -217,30 +217,17 @@
             $(window).scroll(function () {
                 var windowScroll = $(window).scrollTop();
 
-                // fixedFilter(windowScroll);
+                fixedFilter(windowScroll);
             });
 
-            // fixedFilter($(window).scrollTop());
+            fixedFilter($(window).scrollTop());
 
             function fixedFilter(windowScroll) {
                 if (windowScroll > offset) {
                     filters$.addClass('aside-orders-fixed');
-
-                    console.log( $(window).outerHeight(), filters$.outerHeight() )
-
-                    if ( $(window).outerHeight() < filters$.outerHeight() + 50 )
-                        filters$.css({
-                            'height' : filters$.height() - 50,
-                            'overflow-y' : 'scroll'
-                        })
                  }
                 else {
-                    filters$
-                        .css({
-                            'height' : '100%',
-                            'overflow-y' : 'auto'
-                        })
-                        .removeClass('aside-orders-fixed');
+                    filters$.removeClass('aside-orders-fixed');
                 }
             }
 

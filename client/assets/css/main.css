@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
   .aside-orders-fixed {
-    width: 22rem !important;
+    width: 25rem !important;
   }
   .orders__sort > .pull-right {
     float: left !important;
@@ -29,6 +29,7 @@
   .aside-orders-fixed {
     position: relative !important;
     width: auto !important;
+    z-index: 100 !important;
   }
   .header__icon-menu {
     position: absolute;
@@ -106,7 +107,7 @@
     margin-left: 2rem !important;
   }
   .orders__sort {
-    height: 8rem !important;
+    height: 9rem !important;
   }
 }
 @media (max-width: 400px) {
@@ -115,6 +116,9 @@
     top: 7.5rem !important;
     left: -5rem !important;
     right: 0 !important;
+  }
+  .header__icon-menu-login a {
+    font-size: 1.3rem !important;
   }
   .navbar-toggle {
     top: 0.8rem !important;
@@ -10899,7 +10903,6 @@ a:focus {
 }
 .shadow-inset {
   box-shadow: inset 0 0 25px 5px #eee;
-  transition: all 0.3s;
 }
 .shadow-inset:hover {
   box-shadow: 0 0 25px 5px #eee;
@@ -10911,7 +10914,6 @@ a:focus {
   padding: 0 1rem;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  transition: all 0.3s;
 }
 .noUi-handle-lower > .noUi-tooltip::before {
   content: 'от';
@@ -11071,7 +11073,10 @@ a:focus {
   font-size: 1.6rem;
   color: #000;
   opacity: 0.5;
-  transition: all 0.3s;
+}
+.icon-menu__link > span {
+  display: inline-block;
+  margin: 0 2rem 0 1rem;
 }
 .icon-menu__link:hover,
 .icon-menu__link:focus {
@@ -11091,7 +11096,6 @@ a:focus {
   border: 0.2rem solid #0078a6;
   color: #555;
   font-weight: 400;
-  transition: all 0.3s;
 }
 .input::-webkit-input-placeholder {
   font-family: "Open Sans", sans-serif;
@@ -11185,7 +11189,6 @@ a:focus {
   border-radius: 2rem;
   border-color: #0078a6;
   border-width: 0.2rem;
-  transition: all 0.3s;
 }
 .select + .select2 .select2-selection .select2-selection__arrow b {
   margin-top: 0 !important;
@@ -11253,7 +11256,6 @@ a:focus {
   left: 0;
   background-color: #0078a6;
   z-index: 9999;
-  transition: opacity 0.3s;
 }
 .menu-main__list-dropdown:hover {
   display: block;
@@ -11276,7 +11278,6 @@ a:focus {
   line-height: 6.3rem;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  transition: all 0.1s;
 }
 .menu-main__link-dropdown {
   width: 100%;
@@ -11371,8 +11372,11 @@ a:focus {
 }
 .aside-orders-fixed {
   position: fixed;
-  top: 15rem;
-  width: 26.5rem;
+  top: 0;
+  left: 0;
+  width: 33rem;
+  z-index: 5000;
+  background: #fff;
 }
 .section-orders {
   position: relative;
@@ -11503,6 +11507,9 @@ a:focus {
 .header__icon-menu {
   display: inline-block;
   line-height: 8rem;
+}
+.header__icon-menu-login {
+  width: 100%;
 }
 .header__user {
   display: inline-block;
