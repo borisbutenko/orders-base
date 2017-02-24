@@ -278,23 +278,35 @@ a
     & ~ .select2
       margin-top: 1rem
     & .select2-selection
-      height: 3rem
+      height: 3.5rem
       border-radius: 2rem
       border-color: #0078a6
       border-width: .2rem
+      transition: all .3s
+      & .select2-selection__arrow b
+        margin-top: 0 !important
+      &:hover
+        background: #0078a6
+        & .select2-selection__rendered
+          color: #fff !important
+        & .select2-selection__arrow b
+          border-color: #fff transparent transparent !important
       & .select2-selection__rendered
         color: #0078a6
-        line-height: 2.5rem
+        line-height: 3rem
       &:focus
         outline: none
 
 .select2-container--open
   & .select2-selection
     background-color: #0078a6
+    &:hover
+      & .select2-selection__rendered
+        color: #fff !important
+      & .select2-selection__arrow b
+        border-color: transparent transparent #fff !important
   & .select2-selection__rendered
     color: #fff !important
-  & .select2-selection__arrow b
-    border-color: transparent transparent #fff !important
 
 .aside
   margin-bottom: 3rem
