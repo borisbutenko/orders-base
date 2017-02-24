@@ -6011,7 +6011,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 9999;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -10932,6 +10932,8 @@ a:focus {
   left: -2rem;
 }
 .noUi-horizontal {
+  width: 80%;
+  margin-left: 10%;
   margin-top: 2.5rem;
 }
 .noUi-horizontal[disabled] .noUi-tooltip {
