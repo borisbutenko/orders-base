@@ -11226,6 +11226,7 @@ a:focus {
 .aside {
   margin-bottom: 3rem;
   padding: 3rem 0;
+  padding-left: 0.5rem;
 }
 .aside__title {
   font-size: 1.6rem;
