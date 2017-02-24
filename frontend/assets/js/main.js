@@ -48,7 +48,8 @@
                     ],
                     "firstDay": 0
                 },
-                "autoApply" : true
+                "autoApply" : true,
+                "drops" : 'up'
             });
 
             $('#orders-daterange + .icon-daterange').on('click', function() {
@@ -92,7 +93,8 @@
                     ],
                     "firstDay": 0,
                 },
-                "autoApply" : true
+                "autoApply" : true,
+                "drops" : 'up'
             });
 
             $('#orders-daterange-route + .icon-daterange').on('click', function() {
@@ -215,10 +217,10 @@
             $(window).scroll(function () {
                 var windowScroll = $(window).scrollTop();
 
-                fixedFilter(windowScroll);
+                // fixedFilter(windowScroll);
             });
 
-            fixedFilter($(window).scrollTop());
+            // fixedFilter($(window).scrollTop());
 
             function fixedFilter(windowScroll) {
                 if (windowScroll > offset) {
