@@ -11024,6 +11024,7 @@ a:focus {
   float: left;
 }
 .logo__title {
+  text-transform: uppercase;
   min-width: 30rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -11057,14 +11058,27 @@ a:focus {
   color: #f6c900;
 }
 .input {
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   height: 3rem;
   padding-left: 1.5rem;
   border-radius: 2rem;
   border: 0.2rem solid #0078a6;
   color: #555;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.3s;
+}
+.input::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+.input::-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+.input:-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+.input:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
 }
 .input:hover,
 .input:focus {

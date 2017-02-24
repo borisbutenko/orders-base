@@ -182,6 +182,7 @@ a
     padding: .5rem 0
     float: left
   &__title
+    text-transform: uppercase
     min-width: 30rem
     font-size: 1.5rem
     font-weight: 600
@@ -211,13 +212,22 @@ a
       color: #f6c900
 
 .input
+  &::-webkit-input-placeholder
+    font-family: "Open Sans", sans-serif
+  &::-moz-placeholder
+    font-family: "Open Sans", sans-serif
+  &:-moz-placeholder
+    font-family: "Open Sans", sans-serif
+  &:-ms-input-placeholder
+    font-family: "Open Sans", sans-serif
+  font-family: "Open Sans", sans-serif
   width: 100%
   height: 3rem
   padding-left: 1.5rem
   border-radius: 2rem
   border: .2rem solid #0078a6
   color: #555
-  font-weight: 600
+  font-weight: 400
   transition: all .3s
   &:hover,
   &:focus
