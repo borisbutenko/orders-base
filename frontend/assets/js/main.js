@@ -201,22 +201,35 @@
 
             if ( self$.find('i.fa').hasClass('fa-star') ) self$.attr('title', 'Удалить из избранного');
             else self$.attr('title', 'Добавить в избранное');
+
+            var menuIcon$ = $('.header__icon-menu i.fa-star').parent();
+
+            if ( $('.section-orders__star i.fa-star').length ) menuIcon$.addClass('active');
+            else menuIcon$.removeClass('active');
         });
 
         /**
-         * Toggle menu classes
+         * Filter's scroll
          */
-        $('.header__icon-menu').on('click', '.icon-menu__link', function() {
-            $('.icon-menu__link').removeClass('active');
-            $(this).addClass('active');
-        });
+        (function($) {
 
-        /**
-         * Tooltips
-         */
-        $('#example').tooltip({
+            var filters$ = $('.aside-orders'),
+                offset = filters$.offset().top;
 
-        })
+            $(window).scroll(function () {
+                var windowScroll = $(window).scrollTop();
+
+                fixedFilter(windowScroll);
+            });
+
+            fixedFilter($(window).scrollTop());
+
+            function fixedFilter(windowScroll) {
+                if (windowScroll > offset) filters$.addClass('aside-orders-fixed');
+                else filters$.removeClass('aside-orders-fixed');
+            }
+
+        })($);
 
     });
 

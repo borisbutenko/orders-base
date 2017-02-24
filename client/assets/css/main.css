@@ -1,4 +1,7 @@
 @media (max-width: 1200px) {
+  .aside-orders-fixed {
+    width: 22rem !important;
+  }
   .orders__sort > .pull-right {
     float: left !important;
     margin-left: -0.7rem;
@@ -23,6 +26,10 @@
   }
 }
 @media (max-width: 767px) {
+  .aside-orders-fixed {
+    position: relative !important;
+    width: auto !important;
+  }
   .header__icon-menu {
     position: absolute;
     top: 0;
@@ -11344,6 +11351,11 @@ a:focus {
 }
 .aside-orders__button > i.fa {
   margin-left: 1rem;
+}
+.aside-orders-fixed {
+  position: fixed;
+  top: 0;
+  width: 26.5rem;
 }
 .section-orders {
   position: relative;
