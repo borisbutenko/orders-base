@@ -1,10 +1,11 @@
 .banner
-  .banner__border
-  .row
-    .col-md-6.col-sm-6.col-xs-12
-      h2.banner__title Хотите выполнять больше заказов?
-      p.banner__desc Рассылка уведомлений о новых заказах и комментариях по СМС! Хотите активировать рассылку?
-    .col-md-6.col-sm-6.col-xs-12
-      a.button.button-blue.banner__button(href='#0' data-toggle='modal' data-target='#sms')
-        +icon('fa-envelope-o')
-        | хочу!
+  a(href='#0' data-toggle='modal' data-target='#sms')
+    .banner__border
+    .row
+      .col-md-6.col-sm-6.col-xs-12
+        h2.banner__title Хотите выполнять больше заказов?
+        p.banner__desc Рассылка уведомлений о новых заказах и комментариях по СМС! Хотите активировать рассылку?
+      .col-md-6.col-sm-6.col-xs-12
+        .button.button-blue.banner__button
+          +icon('fa-envelope-o')
+          | хочу!

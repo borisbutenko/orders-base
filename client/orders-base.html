@@ -78,16 +78,18 @@
         <div class="container">
           <div class="row">
             <section class="section section-banner">
-              <div class="banner">
-                <div class="banner__border"></div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h2 class="banner__title">Хотите выполнять больше заказов?</h2>
-                    <p class="banner__desc">Рассылка уведомлений о новых заказах и комментариях по СМС! Хотите активировать рассылку?</p>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-12"><a class="button button-blue banner__button" href="#0" data-toggle="modal" data-target="#sms"><i class="fa fa-envelope-o" aria-hidden="true"></i>хочу!</a></div>
-                </div>
-              </div>
+              <div class="banner"><a href="#0" data-toggle="modal" data-target="#sms">
+                  <div class="banner__border"></div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <h2 class="banner__title">Хотите выполнять больше заказов?</h2>
+                      <p class="banner__desc">Рассылка уведомлений о новых заказах и комментариях по СМС! Хотите активировать рассылку?</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="button button-blue banner__button"><i class="fa fa-envelope-o" aria-hidden="true"></i>хочу!
+                      </div>
+                    </div>
+                  </div></a></div>
             </section>
           </div>
         </div>
@@ -100,7 +102,7 @@
                   <div class="aside__row">
                     <h3 class="aside__title">Поиск</h3>
                   </div>
-                  <div class="aside__row">
+                  <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Поиск по номеру заказа">
                     <input class="input input-search" type="text" name="name" placeholder="По номеру заказа"><i class="fa fa-search" aria-hidden="true"></i>
                   </div>
                   <ul class="tablist" role="tablist">
@@ -109,7 +111,7 @@
                   </ul>
                   <div class="tab-content">
                     <div class="tab-pane active" id="region" role="tabpanel">
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Область (регион)">
                         <label class="label" for="orders-country">Область (регион):</label>
                         <select class="select" id="orders-country" data-select>
                           <option selected>Россия</option>
@@ -128,7 +130,7 @@
                               <option>Lorem - 4</option>
                         </select>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Категория груза">
                         <label class="label" for="orders-category">Категория груза:</label>
                         <select class="select" id="orders-category" data-select>
                           <option selected>Выберите категорию</option>
@@ -139,11 +141,11 @@
                               <option>Lorem - 4</option>
                         </select>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="От 1км до 15000км">
                         <label class="label" for="orders-distance">Расстояние (км):</label>
                         <div id="orders-distance"></div>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="От 1кг до 50000кг">
                         <div class="clearfix">
                           <input class="input-radio" id="orders-weight" type="radio" name="weight">
                           <label class="label label-pull pull-left" for="orders-weight">Вес (кг):<span class="span-radio"><span class="span-radio__checked"></span></span></label>
@@ -152,7 +154,7 @@
                         </div>
                         <div id="orders-weight-distance"></div>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Дата перевозки">
                         <label class="label" for="orders-daterange">Дата перевозки:</label>
                         <div class="aside__datetimepicker">
                           <input class="input" id="orders-daterange" type="text" name="daterange"><i class="fa fa-calendar icon-daterange" aria-hidden="true"></i>
@@ -160,7 +162,7 @@
                       </div>
                     </div>
                     <div class="tab-pane" id="route" role="tabpanel">
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Откуда">
                         <label class="label" for="orders-country-from">Откуда:</label>
                         <select class="select" id="orders-country-from" data-select>
                           <option selected>Россия</option>
@@ -179,7 +181,7 @@
                               <option>Lorem - 4</option>
                         </select>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Куда">
                         <label class="label" for="orders-country-to">Куда:</label>
                         <select class="select" id="orders-country-to" data-select>
                           <option selected>Россия</option>
@@ -198,7 +200,7 @@
                               <option>Lorem - 4</option>
                         </select>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Категория груза">
                         <label class="label" for="orders-category-route">Категория груза:</label>
                         <select class="select" id="orders-category-route" data-select>
                           <option selected>Выберите категорию</option>
@@ -209,11 +211,11 @@
                               <option>Lorem - 4</option>
                         </select>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="От 1км до 15000км">
                         <label class="label" for="orders-distance-route">Расстояние (км):</label>
                         <div id="orders-distance-route"></div>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="От 1кг до 50000кг">
                         <div class="clearfix">
                           <input class="input-radio" id="orders-weight-route" type="radio" name="weight-route">
                           <label class="label label-pull pull-left" for="orders-weight-route">Вес (кг):<span class="span-radio"><span class="span-radio__checked"></span></span></label>
@@ -222,7 +224,7 @@
                         </div>
                         <div id="orders-weight-distance-route"></div>
                       </div>
-                      <div class="aside__row">
+                      <div class="aside__row" data-toggle="tooltip" data-placement="top" title="Дата перевозки">
                         <label class="label" for="orders-daterange-route">Дата перевозки:</label>
                         <div class="aside__datetimepicker">
                           <input class="input" id="orders-daterange-route" type="text" name="daterange"><i class="fa fa-calendar icon-daterange" aria-hidden="true"></i>
@@ -242,133 +244,137 @@
                     <label class="label" for="orders-blank">Открывать в новой вкладке<span class="span-radio"><span class="span-radio__checked"></span></span></label>
                   </div>
                 </div>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <section class="section section-orders shadow-inset"><span class="section-orders__fast">срочный заказ</span>
+                  <div class="section-orders__logo" data-toggle="tooltip" data-placement="top" title="Категория груза"><img src="assets/img/logo__order.png" alt="logo"></div><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
                   <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
                     <div class="col-md-7 col-sm-12 col-xs-12">
-                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle" aria-hidden="true"></i>
+                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Заказчик онлайн"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Откуда">
                         <label class="section-orders__label">Откуда:</label><span class="section-orders__for">Москва, Московская область</span>
                       </p>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Куда">
                         <label class="section-orders__label">Куда:</label><span class="section-orders__for">Москва, Московская область</span>
                       </p>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Расстояние">
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
                     <div class="col-md-5 col-sm-12 col-xs-12">
                       <div class="section-orders__status">
-                        <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Дата перевозки"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
-                        <p class="section-orders__status-par"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Вес груза"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
                         </p>
-                        <p class="section-orders__status-par"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                  <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-7 col-sm-12 col-xs-12">
-                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true"></i>
-                      </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
-                      <p class="section-orders__par">
-                        <label class="section-orders__label">Откуда:</label><span class="section-orders__for">Москва, Московская область</span>
-                      </p>
-                      <p class="section-orders__par">
-                        <label class="section-orders__label">Куда:</label><span class="section-orders__for">Москва, Московская область</span>
-                      </p>
-                      <p class="section-orders__par">
-                        <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
-                      </p>
-                    </div>
-                    <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
-                      <div class="section-orders__status">
-                        <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
-                        </p>
-                        <p class="section-orders__status-par"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
-                        </p>
-                        <p class="section-orders__status-par"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Объем груза"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
                         </p>
                       </div>
                     </div>
                   </div>
                 </section>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <section class="section section-orders shadow-inset">
+                  <div class="section-orders__logo" data-toggle="tooltip" data-placement="top" title="Категория груза"><img src="assets/img/logo__order.png" alt="logo"></div><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
                   <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
                     <div class="col-md-7 col-sm-12 col-xs-12">
-                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true"></i>
+                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Заказчик был на сайте в 15:00"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Откуда">
                         <label class="section-orders__label">Откуда:</label><span class="section-orders__for">Москва, Московская область</span>
                       </p>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Куда">
                         <label class="section-orders__label">Куда:</label><span class="section-orders__for">Москва, Московская область</span>
                       </p>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Расстояние">
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
                     <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
                       <div class="section-orders__status">
-                        <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Дата перевозки"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
-                        <p class="section-orders__status-par"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Вес груза"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
                         </p>
-                        <p class="section-orders__status-par"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Объем груза"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
                         </p>
                       </div>
                     </div>
                   </div>
                 </section>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <section class="section section-orders shadow-inset">
+                  <div class="section-orders__logo" data-toggle="tooltip" data-placement="top" title="Категория груза"><img src="assets/img/logo__order.png" alt="logo"></div><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
                   <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
                     <div class="col-md-7 col-sm-12 col-xs-12">
-                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true"></i>
+                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Заказчик был на сайте в 15:00"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Откуда">
                         <label class="section-orders__label">Откуда:</label><span class="section-orders__for">Москва, Московская область</span>
                       </p>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Куда">
                         <label class="section-orders__label">Куда:</label><span class="section-orders__for">Москва, Московская область</span>
                       </p>
-                      <p class="section-orders__par">
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Расстояние">
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
                     <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
                       <div class="section-orders__status">
-                        <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Дата перевозки"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
-                        <p class="section-orders__status-par"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Вес груза"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
                         </p>
-                        <p class="section-orders__status-par"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Объем груза"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="section section-orders shadow-inset">
+                  <div class="section-orders__logo" data-toggle="tooltip" data-placement="top" title="Категория груза"><img src="assets/img/logo__order.png" alt="logo"></div><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                  <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                      <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Заказчик был на сайте в 15:00"></i>
+                      </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Откуда">
+                        <label class="section-orders__label">Откуда:</label><span class="section-orders__for">Москва, Московская область</span>
+                      </p>
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Куда">
+                        <label class="section-orders__label">Куда:</label><span class="section-orders__for">Москва, Московская область</span>
+                      </p>
+                      <p class="section-orders__par" data-toggle="tooltip" data-placement="top" title="Расстояние">
+                        <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
+                      </p>
+                    </div>
+                    <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
+                      <div class="section-orders__status">
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Дата перевозки"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
+                        </p>
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Вес груза"><i class="fa fa-balance-scale" aria-hidden="true"></i>Не определен
+                        </p>
+                        <p class="section-orders__status-par" data-toggle="tooltip" data-placement="top" title="Объем груза"><i class="fa fa-arrows-alt" aria-hidden="true"></i>Не определен
                         </p>
                       </div>
                     </div>
                   </div>
                 </section>
                 <ul class="pager">
-                  <li><a href="#0" aria-label="First"><span aria-hidden="true">«</span></a></li>
-                  <li><a href="#0" aria-label="Previous"><span aria-hidden="true"><</span></a></li>
+                  <li data-toggle="tooltip" data-placement="top" title="Первая страница"><a href="#0" aria-label="First"><span aria-hidden="true">«</span></a></li>
+                  <li data-toggle="tooltip" data-placement="top" title="Назад на страницу"><a href="#0" aria-label="Previous"><span aria-hidden="true"><</span></a></li>
                   <li class="active"><a href="#0">1</a></li>
                   <li><a href="#0">2</a></li>
                   <li><a href="#0">3</a></li>
                   <li><a href="#0">4</a></li>
                   <li><a href="#0">...</a></li>
                   <li><a href="#0">99</a></li>
-                  <li><a href="#0" aria-label="Next"><span aria-hidden="true">></span></a></li>
-                  <li><a href="#0" aria-label="Last"><span aria-hidden="true">»</span></a></li>
+                  <li data-toggle="tooltip" data-placement="top" title="Следующая страница"><a href="#0" aria-label="Next"><span aria-hidden="true">></span></a></li>
+                  <li data-toggle="tooltip" data-placement="top" title="Последняя страница"><a href="#0" aria-label="Last"><span aria-hidden="true">»</span></a></li>
                 </ul>
               </div>
             </div>

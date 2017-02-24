@@ -108,29 +108,27 @@
             var keypressSlider = document.getElementById('orders-distance');
 
             noUiSlider.create(keypressSlider, {
-                start: [800, 3000],
+                start: [1000, 10000],
                 connect: true,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
-                    'min': 0,
-                    'max': 5000
+                    'min': 1,
+                    'max': 15000
                 },
-                margin: 50,
-                padding: 20
+                margin: 50
             });
 
             keypressSlider = document.getElementById('orders-weight-distance');
 
             noUiSlider.create(keypressSlider, {
-                start: [500, 4000],
+                start: [1000, 25000],
                 connect: true,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
-                    'min': 0,
-                    'max': 5000
+                    'min': 1,
+                    'max': 30000
                 },
-                margin: 50,
-                padding: 20
+                margin: 50
             });
 
             keypressSlider.setAttribute('disabled', true);
@@ -152,29 +150,27 @@
             var keypressSlider = document.getElementById('orders-distance-route');
 
             noUiSlider.create(keypressSlider, {
-                start: [800, 3000],
+                start: [1000, 10000],
                 connect: true,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
-                    'min': 0,
-                    'max': 5000
+                    'min': 1,
+                    'max': 15000
                 },
-                margin: 50,
-                padding: 20
+                margin: 50
             });
 
             keypressSlider = document.getElementById('orders-weight-distance-route');
 
             noUiSlider.create(keypressSlider, {
-                start: [500, 4000],
+                start: [1000, 30000],
                 connect: true,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
-                    'min': 0,
-                    'max': 5000
+                    'min': 1,
+                    'max': 50000
                 },
-                margin: 50,
-                padding: 20
+                margin: 50
             });
 
             keypressSlider.setAttribute('disabled', true);
@@ -208,7 +204,7 @@
             else menuIcon$.removeClass('active');
         });
 
-        /**
+        /** 
          * Filter's scroll
          */
         (function($) {
@@ -225,8 +221,25 @@
             fixedFilter($(window).scrollTop());
 
             function fixedFilter(windowScroll) {
-                if (windowScroll > offset) filters$.addClass('aside-orders-fixed');
-                else filters$.removeClass('aside-orders-fixed');
+                if (windowScroll > offset) {
+                    filters$.addClass('aside-orders-fixed');
+
+                    console.log( $(window).outerHeight(), filters$.outerHeight() )
+
+                    if ( $(window).outerHeight() < filters$.outerHeight() + 50 )
+                        filters$.css({
+                            'height' : filters$.height() - 50,
+                            'overflow-y' : 'scroll'
+                        })
+                 }
+                else {
+                    filters$
+                        .css({
+                            'height' : '100%',
+                            'overflow-y' : 'auto'
+                        })
+                        .removeClass('aside-orders-fixed');
+                }
             }
 
         })($);

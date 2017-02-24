@@ -1,5 +1,8 @@
-mixin icon(className)
-  i.fa(class=className aria-hidden='true')
+mixin icon(className, title)
+  if title
+    i.fa(class=className aria-hidden='true' data-toggle='tooltip' data-placement='top' title=title)
+  else
+    i.fa(class=className aria-hidden='true')
 
 mixin option
   - var n = 0

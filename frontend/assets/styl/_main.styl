@@ -28,7 +28,7 @@ h6
   font-weight: 600
 
 main.main
-  margin-top: 3rem
+  margin-top: 18rem
 
 li.picker-switch
   display: none
@@ -58,6 +58,11 @@ a
 
 .shadow
   box-shadow: 0 0 25px 5px #eee
+  &-inset
+    box-shadow: inset 0 0 25px 5px #eee
+    transition: all .3s
+    &:hover
+      box-shadow: 0 0 25px 5px #eee
 
 .noUi-tooltip
   background-color: #0078a6
@@ -141,6 +146,10 @@ a
   margin: 0
   margin-bottom: 3rem
   & > li
+    &:first-child
+      margin-right: -1rem
+    &:last-child
+      margin-left: -1rem
     & > a
       font-weight: 600
       color: #000

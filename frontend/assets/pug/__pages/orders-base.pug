@@ -12,7 +12,7 @@ block main
           aside.aside.aside-orders.shadow
             .aside__row
               h3.aside__title Поиск
-            .aside__row
+            .aside__row(data-toggle='tooltip' data-placement='top' title='Поиск по номеру заказа')
               input.input.input-search(type='text' name='name' placeholder='По номеру заказа')
               +icon('fa-search')
             ul.tablist(role='tablist')
@@ -22,7 +22,7 @@ block main
                 a.tablist__link(href='#route' aria-controls='route' role='tab' data-toggle='tab') По маршруту
             .tab-content
               #region.tab-pane.active(role='tabpanel')
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Область (регион)')
                   label.label(for='orders-country') Область (регион):
                   select#orders-country.select(data-select)
                     option(selected) Россия
@@ -30,15 +30,15 @@ block main
                   select.select(data-select)
                     option(selected) Московкая область
                     +option
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Категория груза')
                   label.label(for='orders-category') Категория груза:
                   select#orders-category.select(data-select)
                     option(selected) Выберите категорию
                     +option
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='От 1км до 15000км')
                   label.label(for='orders-distance') Расстояние (км):
                   #orders-distance
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='От 1кг до 50000кг')
                   .clearfix
                     input#orders-weight.input-radio(type='radio' name='weight')
                     label.label.label-pull.pull-left(for='orders-weight') Вес (кг):
@@ -49,13 +49,13 @@ block main
                       span.span-radio
                         span.span-radio__checked
                   #orders-weight-distance
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Дата перевозки')
                   label.label(for='orders-daterange') Дата перевозки:
                   .aside__datetimepicker
                     input#orders-daterange.input(type='text' name='daterange')
                     +icon('fa-calendar icon-daterange')
               #route.tab-pane(role='tabpanel')
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Откуда')
                   label.label(for='orders-country-from') Откуда:
                   select#orders-country-from.select(data-select)
                     option(selected) Россия
@@ -63,23 +63,23 @@ block main
                   select.select(data-select)
                     option(selected) Московкая область
                     +option
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Куда')
                   label.label(for='orders-country-to') Куда:
-                  select#orders-country-to.select(data-select)
+                  select#orders-country-to.select(data-select )
                     option(selected) Россия
                     +option
                   select.select(data-select)
                     option(selected) Московкая область
                     +option
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Категория груза')
                   label.label(for='orders-category-route') Категория груза:
                   select#orders-category-route.select(data-select)
                     option(selected) Выберите категорию
                     +option
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='От 1км до 15000км')
                   label.label(for='orders-distance-route') Расстояние (км):
                   #orders-distance-route
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='От 1кг до 50000кг')
                   .clearfix
                     input#orders-weight-route.input-radio(type='radio' name='weight-route')
                     label.label.label-pull.pull-left(for='orders-weight-route') Вес (кг):
@@ -90,7 +90,7 @@ block main
                       span.span-radio
                         span.span-radio__checked
                   #orders-weight-distance-route
-                .aside__row
+                .aside__row(data-toggle='tooltip' data-placement='top' title='Дата перевозки')
                   label.label(for='orders-daterange-route') Дата перевозки:
                   .aside__datetimepicker
                     input#orders-daterange-route.input(type='text' name='daterange')
@@ -112,8 +112,10 @@ block main
               label.label(for='orders-blank') Открывать в новой вкладке
                 span.span-radio
                   span.span-radio__checked
-          section.section.section-orders.shadow
-            img.section-orders__logo(src='assets/img/logo__order.png' alt='logo')
+          section.section.section-orders.shadow-inset
+            span.section-orders__fast срочный заказ
+            .section-orders__logo(data-toggle='tooltip' data-placement='top' title='Категория груза')
+              img(src='assets/img/logo__order.png' alt='logo')
             a(href='#0' data-toggle='tooltip' data-placement='top' title='Отправить в избранное').section-orders__star.pull-right
               +icon('fa-star-o')
             .section-orders__timer.pull-right(data-toggle='tooltip' data-placement='top' title='Осталось до конца торга')
@@ -124,36 +126,37 @@ block main
                 h2.section-orders__title
                   a.section-orders__link(href='#0') [2141] Квартирный&nbsp;
                   | переезд
-                  +icon('fa-circle')
+                  +icon('fa-circle', 'Заказчик онлайн')
                 span.section-orders__publish Опубликован <strong>сегодня</strong>
                 span.section-orders__rate 99 ставок
-                p.section-orders__par
+                p.section-orders__par(data-toggle='tooltip' data-placement='top' title='Откуда')
                   label.section-orders__label Откуда:
                   span.section-orders__for Москва, Московская область
-                p.section-orders__par
+                p.section-orders__par(data-toggle='tooltip' data-placement='top' title='Куда')
                   label.section-orders__label Куда:
                   span.section-orders__for Москва, Московская область
-                p.section-orders__par
+                p.section-orders__par(data-toggle='tooltip' data-placement='top' title='Расстояние')
                   label.section-orders__label Расстояние:
                   span.section-orders__for 1700 км
               .col-md-5.col-sm-12.col-xs-12
                 .section-orders__status
-                  p.section-orders__status-par
+                  p.section-orders__status-par(data-toggle='tooltip' data-placement='top' title='Дата перевозки')
                     +icon('fa-calendar')
                     | с
                     span 21.12.2016
                     | до
                     span 28.12.2016
-                  p.section-orders__status-par
+                  p.section-orders__status-par(data-toggle='tooltip' data-placement='top' title='Вес груза')
                     +icon('fa-balance-scale')
                     | Не определен
-                  p.section-orders__status-par
+                  p.section-orders__status-par(data-toggle='tooltip' data-placement='top' title='Объем груза')
                     +icon('fa-arrows-alt')
                     | Не определен
           - var n = 0
           while n < 3
-            section.section.section-orders.shadow
-              img.section-orders__logo(src='assets/img/logo__order.png' alt='logo')
+            section.section.section-orders.shadow-inset
+              .section-orders__logo(data-toggle='tooltip' data-placement='top' title='Категория груза')
+                img(src='assets/img/logo__order.png' alt='logo')
               a(href='#0' data-toggle='tooltip' data-placement='top' title='Отправить в избранное').section-orders__star.pull-right
                 +icon('fa-star-o')
               .section-orders__timer.pull-right(data-toggle='tooltip' data-placement='top' title='Осталось до конца торга')
@@ -164,38 +167,38 @@ block main
                   h2.section-orders__title
                     a.section-orders__link(href='#0') [2141] Квартирный&nbsp;
                     | переезд
-                    +icon('fa-circle-o')
+                    +icon('fa-circle-o', 'Заказчик был на сайте в 15:00')
                   span.section-orders__publish Опубликован <strong>сегодня</strong>
                   span.section-orders__rate 99 ставок
-                  p.section-orders__par
+                  p.section-orders__par(data-toggle='tooltip' data-placement='top' title='Откуда')
                     label.section-orders__label Откуда:
                     span.section-orders__for Москва, Московская область
-                  p.section-orders__par
+                  p.section-orders__par(data-toggle='tooltip' data-placement='top' title='Куда')
                     label.section-orders__label Куда:
                     span.section-orders__for Москва, Московская область
-                  p.section-orders__par
+                  p.section-orders__par(data-toggle='tooltip' data-placement='top' title='Расстояние')
                     label.section-orders__label Расстояние:
                     span.section-orders__for 1700 км
                 .col-md-5.col-sm-12.col-xs-12.clearfix
                   .section-orders__status
-                    p.section-orders__status-par
+                    p.section-orders__status-par(data-toggle='tooltip' data-placement='top' title='Дата перевозки')
                       +icon('fa-calendar')
                       | с
                       span 21.12.2016
                       | до
                       span 28.12.2016
-                    p.section-orders__status-par
+                    p.section-orders__status-par(data-toggle='tooltip' data-placement='top' title='Вес груза')
                       +icon('fa-balance-scale')
                       | Не определен
-                    p.section-orders__status-par
+                    p.section-orders__status-par(data-toggle='tooltip' data-placement='top' title='Объем груза')
                       +icon('fa-arrows-alt')
                       | Не определен
             - n++
           ul.pager
-            li
+            li(data-toggle='tooltip' data-placement='top' title='Первая страница')
               a(href='#0' aria-label='First')
                 span(aria-hidden='true') «
-            li
+            li(data-toggle='tooltip' data-placement='top' title='Назад на страницу')
               a(href='#0' aria-label='Previous')
                 span(aria-hidden='true') <
             li.active
@@ -210,9 +213,9 @@ block main
               a(href='#0') ...
             li
               a(href='#0') 99
-            li
+            li(data-toggle='tooltip' data-placement='top' title='Следующая страница')
               a(href='#0' aria-label='Next')
                 span(aria-hidden='true') >
-            li
+            li(data-toggle='tooltip' data-placement='top' title='Последняя страница')
               a(href='#0' aria-label='Last')
                 span(aria-hidden='true') »
