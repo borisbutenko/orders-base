@@ -23,7 +23,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-10">
                   <div class="header__icon-menu">
                     <ul class="icon-menu clearfix">
-                      <li class="icon-menu__item"><a class="icon-menu__link" href="#0"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                      <li class="icon-menu__item"><a class="active icon-menu__link" href="orders-base.htm"><i class="fa fa-star" aria-hidden="true"></i></a></li>
                       <li class="icon-menu__item"><a class="icon-menu__link" href="#0"><i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
                       <li class="icon-menu__item"><a class="icon-menu__link" href="#0"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                       <li class="icon-menu__item"><a class="icon-menu__link" href="#0"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
@@ -81,15 +81,11 @@
               <div class="banner">
                 <div class="banner__border"></div>
                 <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <h2 class="banner__title">Хотите выполнять больше заказов?</h2>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6"><a class="button button-blue banner__button" href="#0" data-toggle="modal" data-target="#sms"><i class="fa fa-envelope-o" aria-hidden="true"></i>хочу!</a></div>
-                </div>
-                <div class="row">
                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h2 class="banner__title">Хотите выполнять больше заказов?</h2>
                     <p class="banner__desc">Рассылка уведомлений о новых заказах и комментариях по СМС! Хотите активировать рассылку?</p>
                   </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12"><a class="button button-blue banner__button" href="#0" data-toggle="modal" data-target="#sms"><i class="fa fa-envelope-o" aria-hidden="true"></i>хочу!</a></div>
                 </div>
               </div>
             </section>
@@ -104,7 +100,9 @@
                   <div class="aside__row">
                     <h3 class="aside__title">Поиск</h3>
                   </div>
-                  <div class="aside__row"><a class="button button-blue aside-orders__button" href="#0">По номеру заказа<i class="fa fa-search" aria-hidden="true"></i></a></div>
+                  <div class="aside__row">
+                    <input class="input input-search" type="text" name="name" placeholder="По номеру заказа"><i class="fa fa-search" aria-hidden="true"></i>
+                  </div>
                   <ul class="tablist" role="tablist">
                     <li class="tablist__item active" role="search"><a class="tablist__link" href="#region" aria-controls="region" role="tab" data-toggle="tab">По региону</a></li>
                     <li class="tablist__item" role="search"><a class="tablist__link" href="#route" aria-controls="route" role="tab" data-toggle="tab">По маршруту</a></li>
@@ -238,17 +236,17 @@
                 <div class="orders__sort clearfix">
                   <div class="pull-left"><span class="orders__text">Сортировка:</span><a class="orders__link orders__link-active" href="#0">Актуальные (999+)</a><a class="orders__link" href="#0">Срочные (999+)</a><a class="orders__link" href="#0">Выполненные (999+)</a><a class="orders__link" href="#0">Все (999+)</a></div>
                   <div class="pull-right">
-                    <input class="input-radio" id="orders-unrate" type="radio" name="" checked>
+                    <input class="input-radio" id="orders-unrate" type="checkbox" name="" checked>
                     <label class="label" for="orders-unrate">Без ставок<span class="span-radio"><span class="span-radio__checked"></span></span></label>
-                    <input class="input-radio" id="orders-blank" type="radio" name="" checked>
+                    <input class="input-radio" id="orders-blank" type="checkbox" name="" checked>
                     <label class="label" for="orders-blank">Открывать в новой вкладке<span class="span-radio"><span class="span-radio__checked"></span></span></label>
                   </div>
                 </div>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                  <div class="section-orders__timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
+                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                  <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
                       <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle" aria-hidden="true"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
                       <p class="section-orders__par">
@@ -261,7 +259,7 @@
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
                       <div class="section-orders__status">
                         <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
@@ -273,11 +271,11 @@
                     </div>
                   </div>
                 </section>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                  <div class="section-orders__timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
+                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                  <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
                       <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
                       <p class="section-orders__par">
@@ -290,7 +288,7 @@
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 clearfix">
+                    <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
                       <div class="section-orders__status">
                         <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
@@ -302,11 +300,11 @@
                     </div>
                   </div>
                 </section>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                  <div class="section-orders__timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
+                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                  <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
                       <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
                       <p class="section-orders__par">
@@ -319,7 +317,7 @@
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 clearfix">
+                    <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
                       <div class="section-orders__status">
                         <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
@@ -331,11 +329,11 @@
                     </div>
                   </div>
                 </section>
-                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                  <div class="section-orders__timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
+                <section class="section section-orders shadow"><img class="section-orders__logo" src="assets/img/logo__order.png" alt="logo"><a class="section-orders__star pull-right" href="#0" data-toggle="tooltip" data-placement="top" title="Отправить в избранное"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                  <div class="section-orders__timer pull-right" data-toggle="tooltip" data-placement="top" title="Осталось до конца торга"><i class="fa fa-clock-o" aria-hidden="true"></i><span>55м</span>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
                       <h2 class="section-orders__title"><a class="section-orders__link" href="#0">[2141] Квартирный&nbsp;</a>переезд<i class="fa fa-circle-o" aria-hidden="true"></i>
                       </h2><span class="section-orders__publish">Опубликован <strong>сегодня</strong></span><span class="section-orders__rate">99 ставок</span>
                       <p class="section-orders__par">
@@ -348,7 +346,7 @@
                         <label class="section-orders__label">Расстояние:</label><span class="section-orders__for">1700 км</span>
                       </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 clearfix">
+                    <div class="col-md-5 col-sm-12 col-xs-12 clearfix">
                       <div class="section-orders__status">
                         <p class="section-orders__status-par"><i class="fa fa-calendar" aria-hidden="true"></i>с<span>21.12.2016</span>до<span>28.12.2016</span>
                         </p>
@@ -386,7 +384,7 @@
             <h2 class="modal-title" id="sms-title">Хотите выполнять больше заказов?</h2>
           </div>
           <div class="modal-body">
-            <p>Рассылка уведомлений о новых задачах и комментариях по СМС. Хотите активировать рассылку?</p>
+            <p>Рассылка уведомлений о новых заказах и комментариях по СМС. Хотите активировать рассылку?</p>
           </div>
           <div class="modal-footer"><a class="button button-orange" href="#0">ХОЧУ!</a></div>
         </div>

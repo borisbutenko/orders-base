@@ -1,4 +1,16 @@
+@media (max-width: 1200px) {
+  .aside__row {
+    padding: 0 2.5rem !important;
+  }
+  .input-search+i.fa {
+    right: 3.5rem !important;
+  }
+}
 @media (max-width: 992px) {
+  .section-orders__status {
+    margin-top: 2rem !important;
+    margin-left: 12rem;
+  }
   .orders__title {
     margin-bottom: 3rem;
   }
@@ -7,6 +19,20 @@
   }
 }
 @media (max-width: 767px) {
+  .header__icon-menu {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+  }
+  .navbar-toggle {
+    position: relative;
+    top: 0.5rem;
+  }
+  .banner__button {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 2rem;
+  }
   #menu-main {
     position: relative;
     z-index: 9999;
@@ -38,10 +64,14 @@
 }
 @media (max-width: 600px) {
   .banner {
-    padding-left: 2rem !important;
+    padding: 2rem !important;
   }
 }
 @media (max-width: 500px) {
+  .banner__button {
+    display: block !important;
+    margin: 1rem;
+  }
   .section-orders__title {
     width: 100%;
     padding: 0 !important;
@@ -69,7 +99,18 @@
 }
 @media (max-width: 400px) {
   .header__icon-menu {
-    display: none !important;
+    position: absolute;
+    top: 7.5rem !important;
+    left: -5rem !important;
+    right: 0 !important;
+  }
+  .navbar-toggle {
+    top: 0.8rem !important;
+  }
+  .header__logout {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 /*
@@ -10831,14 +10872,14 @@ p {
 }
 a {
   color: #0078a6;
-  transition: opacity 0.1s;
+  opacity: 1;
 }
 a:hover,
 a:active,
 a:focus {
+  opacity: 0.9;
   text-decoration: none;
   outline: none;
-  opacity: 0.9;
 }
 .shadow {
   box-shadow: 0 0 25px 5px #eee;
@@ -10940,6 +10981,9 @@ a:focus {
   color: #fff;
   background: #0078a6;
 }
+.ranges {
+  display: none !important;
+}
 .tablist {
   margin-bottom: 1.5rem;
 }
@@ -10979,6 +11023,7 @@ a:focus {
   float: left;
 }
 .logo__title {
+  min-width: 30rem;
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 2.4rem;
@@ -10999,12 +11044,16 @@ a:focus {
   font-size: 1.6rem;
   color: #000;
   opacity: 0.5;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 .icon-menu__link:hover,
 .icon-menu__link:focus {
   opacity: 1;
   color: #000;
+}
+.icon-menu__link.active {
+  opacity: 1;
+  color: #f6c900;
 }
 .input {
   width: 100%;
@@ -11014,11 +11063,12 @@ a:focus {
   border: 0.2rem solid #0078a6;
   color: #555;
   font-weight: 600;
-  opacity: 0.8;
   transition: all 0.3s;
 }
+.input:hover,
 .input:focus {
-  opacity: 1;
+  background: #0078a6;
+  color: #fff;
   outline: none;
 }
 .input-mini {
@@ -11054,6 +11104,36 @@ a:focus {
   border-radius: 50%;
   background: #0078a6;
 }
+.input-search {
+  position: relative;
+  height: 3.5rem;
+}
+.input-search + i.fa {
+  position: absolute;
+  top: 1rem;
+  right: 5rem;
+  color: #0078a6;
+}
+.input-search:hover + i.fa,
+.input-search:focus + i.fa {
+  color: #fff;
+}
+.input-search:hover::-webkit-input-placeholder,
+.input-search:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+.input-search:hover::-moz-placeholder,
+.input-search:focus::-moz-placeholder {
+  color: #fff;
+}
+.input-search:hover:-moz-placeholder,
+.input-search:focus:-moz-placeholder {
+  color: #fff;
+}
+.input-search:hover:-ms-input-placeholder,
+.input-search:focus:-ms-input-placeholder {
+  color: #fff;
+}
 .select + .select2 {
   width: 100% !important;
 }
@@ -11073,6 +11153,15 @@ a:focus {
 .select + .select2 .select2-selection:focus {
   outline: none;
 }
+.select2-container--open .select2-selection {
+  background-color: #0078a6;
+}
+.select2-container--open .select2-selection__rendered {
+  color: #fff !important;
+}
+.select2-container--open .select2-selection__arrow b {
+  border-color: transparent transparent #fff !important;
+}
 .aside {
   margin-bottom: 3rem;
   padding: 3rem 0;
@@ -11081,6 +11170,7 @@ a:focus {
   font-size: 1.6rem;
 }
 .aside__row {
+  position: relative;
   margin-bottom: 3rem;
   padding: 0 3.5rem;
 }
@@ -11291,7 +11381,6 @@ a:focus {
   padding-left: 3.5rem;
   border-left: 0.3rem solid #0078a6;
   margin-top: 6.5rem;
-  margin-left: 8rem;
 }
 .section-orders__status-par {
   font-weight: 600;
