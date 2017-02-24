@@ -13,9 +13,8 @@ block main
             .aside__row
               h3.aside__title Поиск
             .aside__row
-              a.button.button-blue.aside-orders__button(href='#0')
-                | По номеру заказа
-                +icon('fa-search')
+              input.input.input-search(type='text' name='name' placeholder='По номеру заказа')
+              +icon('fa-search')
             ul.tablist(role='tablist')
               li.tablist__item.active(role='search')
                 a.tablist__link(href='#region' aria-controls='region' role='tab' data-toggle='tab') По региону
@@ -105,23 +104,23 @@ block main
               a.orders__link(href='#0') Выполненные (999+)
               a.orders__link(href='#0') Все (999+)
             .pull-right
-              input#orders-unrate.input-radio(type='radio' name='' checked)
+              input#orders-unrate.input-radio(type='checkbox' name='' checked)
               label.label(for='orders-unrate') Без ставок
                 span.span-radio
                   span.span-radio__checked
-              input#orders-blank.input-radio(type='radio' name='' checked)
+              input#orders-blank.input-radio(type='checkbox' name='' checked)
               label.label(for='orders-blank') Открывать в новой вкладке
                 span.span-radio
                   span.span-radio__checked
           section.section.section-orders.shadow
             img.section-orders__logo(src='assets/img/logo__order.png' alt='logo')
-            a(href='#0').section-orders__star.pull-right
+            a(href='#0' data-toggle='tooltip' data-placement='top' title='Отправить в избранное').section-orders__star.pull-right
               +icon('fa-star-o')
-            .section-orders__timer.pull-right
+            .section-orders__timer.pull-right(data-toggle='tooltip' data-placement='top' title='Осталось до конца торга')
               +icon('fa-clock-o')
               span 55м
             .row
-              .col-md-6.col-sm-6.col-xs-12
+              .col-md-7.col-sm-12.col-xs-12
                 h2.section-orders__title
                   a.section-orders__link(href='#0') [2141] Квартирный&nbsp;
                   | переезд
@@ -137,7 +136,7 @@ block main
                 p.section-orders__par
                   label.section-orders__label Расстояние:
                   span.section-orders__for 1700 км
-              .col-md-6.col-sm-6.col-xs-12
+              .col-md-5.col-sm-12.col-xs-12
                 .section-orders__status
                   p.section-orders__status-par
                     +icon('fa-calendar')
@@ -155,13 +154,13 @@ block main
           while n < 3
             section.section.section-orders.shadow
               img.section-orders__logo(src='assets/img/logo__order.png' alt='logo')
-              a(href='#0').section-orders__star.pull-right
+              a(href='#0' data-toggle='tooltip' data-placement='top' title='Отправить в избранное').section-orders__star.pull-right
                 +icon('fa-star-o')
-              .section-orders__timer.pull-right
+              .section-orders__timer.pull-right(data-toggle='tooltip' data-placement='top' title='Осталось до конца торга')
                 +icon('fa-clock-o')
                 span 55м
               .row
-                .col-md-6.col-sm-6.col-xs-12
+                .col-md-7.col-sm-12.col-xs-12
                   h2.section-orders__title
                     a.section-orders__link(href='#0') [2141] Квартирный&nbsp;
                     | переезд
@@ -177,7 +176,7 @@ block main
                   p.section-orders__par
                     label.section-orders__label Расстояние:
                     span.section-orders__for 1700 км
-                .col-md-6.col-sm-6.col-xs-12.clearfix
+                .col-md-5.col-sm-12.col-xs-12.clearfix
                   .section-orders__status
                     p.section-orders__status-par
                       +icon('fa-calendar')

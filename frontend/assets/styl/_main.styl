@@ -47,13 +47,13 @@ p
 
 a
   color: #0078a6
-  transition: opacity .1s
+  opacity: 1
   &:hover,
   &:active,
   &:focus
+    opacity: .9
     text-decoration: none
     outline: none
-    opacity: .9
 
 .shadow
   box-shadow: 0 0 25px 5px #eee
@@ -148,6 +148,9 @@ a
       color: #fff
       background: #0078a6
 
+.ranges
+  display: none !important
+
 .tablist
   margin-bottom: 1.5rem
   &__item
@@ -178,6 +181,7 @@ a
     padding: .5rem 0
     float: left
   &__title
+    min-width: 30rem
     font-size: 1.5rem
     font-weight: 600
     margin-top: 2.4rem
@@ -196,11 +200,14 @@ a
     font-size: 1.6rem
     color: #000
     opacity: .5
-    transition: opacity .3s
+    transition: all .3s
     &:hover,
     &:focus
       opacity: 1
       color: #000
+    &.active
+      opacity: 1
+      color: #f6c900
 
 .input
   width: 100%
@@ -210,10 +217,11 @@ a
   border: .2rem solid #0078a6
   color: #555
   font-weight: 600
-  opacity: .8
   transition: all .3s
+  &:hover,
   &:focus
-    opacity: 1
+    background: #0078a6
+    color: #fff
     outline: none
   &-mini
     display: none !important
@@ -243,6 +251,26 @@ a
         position: absolute
         border-radius: 50%
         background: #0078a6
+  &-search
+    position: relative
+    height: 3.5rem
+    & + i.fa
+      position: absolute
+      top: 1rem
+      right: 5rem
+      color: #0078a6
+    &:hover,
+    &:focus
+      & + i.fa
+        color: #fff
+      &::-webkit-input-placeholder
+        color: #fff
+      &::-moz-placeholder
+        color: #fff
+      &:-moz-placeholder
+        color: #fff
+      &:-ms-input-placeholder
+        color: #fff
 
 .select
   & + .select2
@@ -260,12 +288,21 @@ a
       &:focus
         outline: none
 
+.select2-container--open
+  & .select2-selection
+    background-color: #0078a6
+  & .select2-selection__rendered
+    color: #fff !important
+  & .select2-selection__arrow b
+    border-color: transparent transparent #fff !important
+
 .aside
   margin-bottom: 3rem
   padding: 3rem 0
   &__title
     font-size: 1.6rem
   &__row
+    position: relative
     margin-bottom: 3rem
     padding: 0 3.5rem
   &__datetimepicker
