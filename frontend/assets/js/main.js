@@ -128,7 +128,7 @@
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
                     'min': 1,
-                    'max': 30000
+                    'max': 50000
                 },
                 margin: 50
             });
