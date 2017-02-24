@@ -112,6 +112,7 @@
             noUiSlider.create(keypressSlider, {
                 start: [1000, 10000],
                 connect: true,
+                step : 10,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
                     'min': 1,
@@ -125,6 +126,7 @@
             noUiSlider.create(keypressSlider, {
                 start: [1000, 25000],
                 connect: true,
+                step : 10,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
                     'min': 1,
@@ -154,6 +156,7 @@
             noUiSlider.create(keypressSlider, {
                 start: [1000, 10000],
                 connect: true,
+                step : 10,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
                     'min': 1,
@@ -167,6 +170,7 @@
             noUiSlider.create(keypressSlider, {
                 start: [1000, 30000],
                 connect: true,
+                step : 10,
                 tooltips: [true, wNumb({ decimals: 1 })],
                 range: {
                     'min': 1,
