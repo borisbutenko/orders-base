@@ -12,7 +12,19 @@ html(lang='ru')
     include mixins
     .wrapper
       include __blocks/header
-      main.main
+      main#main.main
         block main
     include __blocks/footer
     include __blocks/modals
+    include __blocks/search-sm
+      script.
+          var slideout = new Slideout({
+              'panel': document.getElementById('main'),
+              'menu': document.getElementById('search-sm'),
+              'padding': 256,
+              'tolerance': 70
+          });
+
+          document.getElementById('search-sm-btn').addEventListener('click', function () {
+              slideout.toggle();
+          });

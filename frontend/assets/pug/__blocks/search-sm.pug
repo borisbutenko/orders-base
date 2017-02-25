@@ -1,0 +1,86 @@
+aside#search-sm.aside.aside-orders.hidden-lg.hidden-md.hidden-sm
+  .aside__row
+    h3.aside__title Поиск
+  .aside__row(data-toggle='tooltip' data-placement='top' title='Поиск по номеру заказа')
+    input.input.input-search(type='text' name='name' placeholder='По номеру заказа')
+    +icon('fa-search')
+  ul.tablist(role='tablist')
+    li.tablist__item.active(role='search')
+      a.tablist__link(href='#region-sm' aria-controls='region' role='tab' data-toggle='tab') По региону
+    li.tablist__item(role='search')
+      a.tablist__link(href='#route-sm' aria-controls='route' role='tab' data-toggle='tab') По маршруту
+  .tab-content
+    #region-sm.tab-pane.active(role='tabpanel')
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Область (регион)')
+        label.label(for='orders-country') Область (регион):
+        select#orders-country.select(data-select)
+          option(selected) Россия
+          +option
+        select.select(data-select)
+          option(selected) Московкая область
+          +option
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Категория груза')
+        label.label(for='orders-category') Категория груза:
+        select#orders-category.select(data-select)
+          option(selected) Выберите категорию
+          +option
+      .aside__row(data-toggle='tooltip' data-placement='top' title='От 1км до 15000км')
+        label.label(for='orders-distance-sm') Расстояние (км):
+        #orders-distance-sm
+      .aside__row(data-toggle='tooltip' data-placement='top' title='От 1кг до 50000кг')
+        .clearfix
+          input#orders-weight.input-radio(type='radio' name='weight')
+          label.label.label-pull.pull-left(for='orders-weight') Вес (кг):
+            span.span-radio
+              span.span-radio__checked
+          input#orders-no-weight.input-radio(type='radio' name='weight' checked)
+          label.label.label-pull.pull-right(for='orders-no-weight') Вес не указан
+            span.span-radio
+              span.span-radio__checked
+        #orders-weight-distance-sm
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Дата перевозки')
+        label.label(for='orders-daterange-sm') Дата перевозки:
+        .aside__datetimepicker
+          input#orders-daterange-sm.input(type='text' name='daterange')
+          +icon('fa-calendar icon-daterange')
+    #route-sm.tab-pane(role='tabpanel')
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Откуда')
+        label.label(for='orders-country-from') Откуда:
+        select#orders-country-from.select(data-select)
+          option(selected) Россия
+          +option
+        select.select(data-select)
+          option(selected) Московкая область
+          +option
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Куда')
+        label.label(for='orders-country-to') Куда:
+        select#orders-country-to.select(data-select )
+          option(selected) Россия
+          +option
+        select.select(data-select)
+          option(selected) Московкая область
+          +option
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Категория груза')
+        label.label(for='orders-category-route') Категория груза:
+        select#orders-category-route.select(data-select)
+          option(selected) Выберите категорию
+          +option
+      .aside__row(data-toggle='tooltip' data-placement='top' title='От 1км до 15000км')
+        label.label(for='orders-distance-route-sm') Расстояние (км):
+        #orders-distance-route-sm
+      .aside__row(data-toggle='tooltip' data-placement='top' title='От 1кг до 50000кг')
+        .clearfix
+          input#orders-weight-route.input-radio(type='radio' name='weight-route')
+          label.label.label-pull.pull-left(for='orders-weight-route') Вес (кг):
+            span.span-radio
+              span.span-radio__checked
+          input#orders-no-weight-route.input-radio(type='radio' name='weight-route' checked)
+          label.label.label-pull.pull-right(for='orders-no-weight-route') Вес не указан
+            span.span-radio
+              span.span-radio__checked
+        #orders-weight-distance-route-sm
+      .aside__row(data-toggle='tooltip' data-placement='top' title='Дата перевозки')
+        label.label(for='orders-daterange-route-sm') Дата перевозки:
+        .aside__datetimepicker
+          input#orders-daterange-route-sm.input(type='text' name='daterange')
+          +icon('fa-calendar icon-daterange')

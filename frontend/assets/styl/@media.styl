@@ -37,6 +37,7 @@
     width: auto !important
     height: auto !important
     z-index: 100 !important
+    top: 0 !important
 
   //.header__icon-menu
   //  position: absolute
@@ -52,11 +53,12 @@
     top: 0 !important
     margin-top: 2rem
 
-  #menu-main
+  .navbar-collapse
     position: relative
-    z-index: 9999
+    z-index: 12000
     background: #0078a6
     & ul.menu-main__list
+      z-index: 12000
       width: 100%
       & li.menu-main__item
         display: block
@@ -76,6 +78,11 @@
 
   .logo__title
     display: none !important
+
+  .header__menu
+    position: fixed
+    top: 0
+    width: 100%
 
 @media (max-width: 600px)
   .banner
@@ -112,13 +119,15 @@
     height: 9rem !important
 
 @media (max-width: 400px)
+  .header__search
+    line-height: 7rem !important
+
   .header__icon-menu
-    &-login a
-      font-size: 1.3rem !important
-    position: absolute
-    top: 7.5rem !important
-    left: -5rem !important
-    right: 0 !important
+    display: none !important
+    &-login
+      display: block !important
+      & a
+        font-size: 1.3rem !important
 
   .navbar-toggle
     top: .8rem !important

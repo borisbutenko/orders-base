@@ -1,20 +1,26 @@
 .header
   background: #fff
   width: 100%
+  &__search
+    line-height: 6.5rem
+    margin-right: 1rem
+    & a
+      color: #fff
+      & i.fa
+        margin-left: 1rem
+      &:hover
+        color: #fff
   &__panel
     height: 8rem
   &__menu
     height: 7rem
     background-color: #0078a6
+    z-index: 11000
     &-fixed
       position: fixed
       top: 0
       width: 100%
       z-index: 9999
-      height: 8.5rem
-      padding-top: 2rem
-      & button.navbar-toggle
-        margin-top: 0 !important
   &__icon-menu
     display: inline-block
     line-height: 8rem
@@ -27,6 +33,15 @@
       left: unset!important
     &-login
       width: 100%
+    &-mobile
+      line-height: 6.5rem
+      margin-right: 2rem
+      & a
+        color: #fff
+        opacity: 1
+        &:hover
+          opacity: .9
+          color: #fff
   &__user
     display: inline-block
   &__logout

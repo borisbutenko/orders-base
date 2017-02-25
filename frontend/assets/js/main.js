@@ -102,6 +102,96 @@
             });
         })($);
 
+        (function($) {
+            var dateRangePicker$ = $('#orders-daterange-sm').daterangepicker({
+                "locale" : {
+                    "format": "DD/MM/YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Применить",
+                    "cancelLabel": "Отмена",
+                    "fromLabel": "С",
+                    "toLabel": "По",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "Пн",
+                        "Вт",
+                        "Ср",
+                        "Чт",
+                        "Пт",
+                        "Сб",
+                        "Вс"
+                    ],
+                    "monthNames": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Март",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "firstDay": 0
+                },
+                "autoApply" : true,
+                "drops" : 'up'
+            });
+
+            $('#orders-daterange-sm + .icon-daterange').on('click', function() {
+                dateRangePicker$.trigger('click')
+            });
+        })($);
+
+        (function($) {
+            var dateRangePicker$ = $('#orders-daterange-route-sm').daterangepicker({
+                "locale" : {
+                    "format": "DD/MM/YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Применить",
+                    "cancelLabel": "Отмена",
+                    "fromLabel": "С",
+                    "toLabel": "По",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "Пн",
+                        "Вт",
+                        "Ср",
+                        "Чт",
+                        "Пт",
+                        "Сб",
+                        "Вс"
+                    ],
+                    "monthNames": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Март",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "firstDay": 0,
+                },
+                "autoApply" : true,
+                "drops" : 'up'
+            });
+
+            $('#orders-daterange-route-sm + .icon-daterange').on('click', function() {
+                dateRangePicker$.trigger('click')
+            });
+        })($);
+
         /**
          * noUiSlider
          */
@@ -193,6 +283,94 @@
 
         })($);
 
+        (function($) {
+
+            var keypressSlider = document.getElementById('orders-distance-sm');
+
+            noUiSlider.create(keypressSlider, {
+                start: [1000, 10000],
+                connect: true,
+                step : 10,
+                tooltips: [true, wNumb({ decimals: 1 })],
+                range: {
+                    'min': 1,
+                    'max': 15000
+                },
+                margin: 50
+            });
+
+            keypressSlider = document.getElementById('orders-weight-distance-sm');
+
+            noUiSlider.create(keypressSlider, {
+                start: [1000, 25000],
+                connect: true,
+                step : 10,
+                tooltips: [true, wNumb({ decimals: 1 })],
+                range: {
+                    'min': 1,
+                    'max': 50000
+                },
+                margin: 50
+            });
+
+            keypressSlider.setAttribute('disabled', true);
+
+            $('#orders-weight').on('click', function() {
+                if ( $(this).is(':checked') )
+                    keypressSlider.removeAttribute('disabled');
+            });
+
+            $('#orders-no-weight').on('click', function() {
+                if ( $(this).is(':checked') )
+                    keypressSlider.setAttribute('disabled', true);
+            });
+
+        })($);
+
+        (function($) {
+
+            var keypressSlider = document.getElementById('orders-distance-route-sm');
+
+            noUiSlider.create(keypressSlider, {
+                start: [1000, 10000],
+                connect: true,
+                step : 10,
+                tooltips: [true, wNumb({ decimals: 1 })],
+                range: {
+                    'min': 1,
+                    'max': 15000
+                },
+                margin: 50
+            });
+
+            keypressSlider = document.getElementById('orders-weight-distance-route-sm');
+
+            noUiSlider.create(keypressSlider, {
+                start: [1000, 30000],
+                connect: true,
+                step : 10,
+                tooltips: [true, wNumb({ decimals: 1 })],
+                range: {
+                    'min': 1,
+                    'max': 50000
+                },
+                margin: 50
+            });
+
+            keypressSlider.setAttribute('disabled', true);
+
+            $('#orders-weight-route').on('click', function() {
+                if ( $(this).is(':checked') )
+                    keypressSlider.removeAttribute('disabled');
+            });
+
+            $('#orders-no-weight-route').on('click', function() {
+                if ( $(this).is(':checked') )
+                    keypressSlider.setAttribute('disabled', true);
+            });
+
+        })($);
+
         /**
          * Toggle star
          */
@@ -221,10 +399,10 @@
             $(window).scroll(function () {
                 var windowScroll = $(window).scrollTop();
 
-                fixedFilter(windowScroll);
+                // fixedFilter(windowScroll);
             });
 
-            fixedFilter($(window).scrollTop());
+            // fixedFilter($(window).scrollTop());
 
             function fixedFilter(windowScroll) {
                 if (windowScroll > offset) {
@@ -256,13 +434,13 @@
             function fixedMenu(windowScroll) {
                 if (windowScroll > offset) {
                     menu$.addClass('header__menu-fixed');
-                    $('.header__icon-menu').addClass('header__icon-menu-fixed');
-                    $('.header__logout').addClass('header__logout-fixed');
+                    // $('.header__icon-menu').addClass('header__icon-menu-fixed');
+                    // $('.header__logout').addClass('header__logout-fixed');
                 }
                 else {
                     menu$.removeClass('header__menu-fixed');
-                    $('.header__icon-menu').removeClass('header__icon-menu-fixed');
-                    $('.header__logout').removeClass('header__logout-fixed');
+                    // $('.header__icon-menu').removeClass('header__icon-menu-fixed');
+                    // $('.header__logout').removeClass('header__logout-fixed');
                 }
             }
 
