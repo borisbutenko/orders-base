@@ -152,11 +152,6 @@
   .navbar-toggle {
     top: 0.8rem !important;
   }
-  .header__logout {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }
 /*
  * Bootstrap v3.3.7 (http://getbootstrap.com)
