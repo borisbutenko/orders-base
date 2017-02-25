@@ -31,6 +31,9 @@
   }
 }
 @media (max-width: 767px) {
+  .header__icon-menu {
+    float: right;
+  }
   .aside-orders-fixed {
     position: relative !important;
     width: auto !important;
@@ -11527,7 +11530,7 @@ a:focus {
   z-index: 10000;
   line-height: 0;
   top: 1rem !important;
-  right: 6rem !important;
+  right: 4rem !important;
   left: unset !important;
 }
 .header__icon-menu-login {
