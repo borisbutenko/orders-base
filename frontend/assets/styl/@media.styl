@@ -29,6 +29,9 @@
       margin-bottom: 3rem
 
 @media (max-width: 767px)
+  .icon-menu__link>span
+    font-size: 1.4rem
+
   .header__icon-menu
     float: right
 
@@ -89,6 +92,24 @@
     padding: 2rem !important
 
 @media (max-width 500px)
+  .header__logout-mobile
+    display: none !important
+
+  .header__icon-menu
+    display: none !important
+    &-login
+      display: block !important
+      & a
+        font-size: 1.3rem !important
+
+  li.menu-main__item-mobile
+    display: block !important
+    margin-bottom: -2rem
+    & > .header__icon-menu,
+    & > .header__logout-mobile
+      display: block !important
+      line-height: 6rem !important
+
   .banner__button
     display: block !important
     margin: 1rem
@@ -121,13 +142,6 @@
 @media (max-width: 400px)
   .header__search
     line-height: 7rem !important
-
-  .header__icon-menu
-    display: none !important
-    &-login
-      display: block !important
-      & a
-        font-size: 1.3rem !important
 
   .navbar-toggle
     top: .8rem !important

@@ -37,12 +37,33 @@ html(lang='ru')
               .menu-main
                 nav.menu-main__nav
                   .navbar-header
+                    .header__icon-menu.header__icon-menu-mobile.hidden-lg.hidden-md.hidden-sm.pull-right
+                      ul.icon-menu.clearfix
+                        each icon in icons
+                          li.icon-menu__item
+                            a(href=icon.u).icon-menu__link
+                              i.fa(class=icon.c aria-hidden='true')
+                              span= icon.cl
                     button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#menu-main' aria-expanded='false')
-                      span.icon-bar
-                      span.icon-bar
-                      span.icon-bar
+                      a(href='#0') Меню
+                      div.pull-right.clearfix
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    .header__search.hidden-lg.hidden-md.hidden-sm.pull-right
+                      a#search-sm-btn(href='#0')
+                        | Поиск
+                        +icon('fa-search')
                   #menu-main.collapse.navbar-collapse
                     ul.menu-main__list.pull-right.clearfix
+                      li.menu-main__item.menu-main__item-mobile.clearfix
+                        .header__icon-menu.header__icon-menu-mobile
+                          ul.icon-menu.clearfix
+                            each icon in icons
+                              li.icon-menu__item
+                                a(href=icon.u).icon-menu__link
+                                  i.fa(class=icon.c aria-hidden='true')
+                                  span= icon.cl
                       each item in menu
                         if ( !item.s )
                           li.menu-main__item
@@ -54,7 +75,7 @@ html(lang='ru')
                               each s in item.s
                                 li.menu-main__item.menu-main__item-dropdown
                                   a.menu-main__link.menu-main__link-dropdown(href=s.u)= s.n
-      main.main
+      main#main.main
         .container
           .row
             section.section.section-banner
@@ -64,7 +85,7 @@ html(lang='ru')
             .orders.clearfix
               .col-md-3.col-sm-4.col-xs-12
                 h3.orders__title Поиск грузов по России и СНГ
-                aside.aside.aside-orders.shadow
+                aside.aside.aside-orders.shadow.hidden-xs
                   .aside__row
                     h3.aside__title Поиск
                   .aside__row(data-toggle='tooltip' data-placement='top' title='Поиск по номеру заказа')
@@ -278,3 +299,15 @@ html(lang='ru')
                       span(aria-hidden='true') »
     include ../__blocks/footer
     include ../__blocks/modals
+    include ../__blocks/search-sm
+      script.
+          var slideout = new Slideout({
+              'panel': document.getElementById('main'),
+              'menu': document.getElementById('search-sm'),
+              'padding': 256,
+              'tolerance': 70
+          });
+
+          document.getElementById('search-sm-btn').addEventListener('click', function () {
+              slideout.toggle();
+          });

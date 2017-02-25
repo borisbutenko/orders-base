@@ -31,6 +31,9 @@
   }
 }
 @media (max-width: 767px) {
+  .icon-menu__link>span {
+    font-size: 1.4rem;
+  }
   .header__icon-menu {
     float: right;
   }
@@ -91,6 +94,27 @@
   }
 }
 @media (max-width: 500px) {
+  .header__logout-mobile {
+    display: none !important;
+  }
+  .header__icon-menu {
+    display: none !important;
+  }
+  .header__icon-menu-login {
+    display: block !important;
+  }
+  .header__icon-menu-login a {
+    font-size: 1.3rem !important;
+  }
+  li.menu-main__item-mobile {
+    display: block !important;
+    margin-bottom: -2rem;
+  }
+  li.menu-main__item-mobile > .header__icon-menu,
+  li.menu-main__item-mobile > .header__logout-mobile {
+    display: block !important;
+    line-height: 6rem !important;
+  }
   .banner__button {
     display: block !important;
     margin: 1rem;
@@ -124,15 +148,6 @@
 @media (max-width: 400px) {
   .header__search {
     line-height: 7rem !important;
-  }
-  .header__icon-menu {
-    display: none !important;
-  }
-  .header__icon-menu-login {
-    display: block !important;
-  }
-  .header__icon-menu-login a {
-    font-size: 1.3rem !important;
   }
   .navbar-toggle {
     top: 0.8rem !important;
@@ -11096,7 +11111,7 @@ a:focus {
 }
 .icon-menu__link > span {
   display: inline-block;
-  margin: 0 2rem 0 1rem;
+  margin: 0 1rem;
 }
 .icon-menu__link:hover,
 .icon-menu__link:focus {
@@ -11329,6 +11344,9 @@ body {
 .menu-main__item {
   position: relative;
   display: inline-block;
+}
+.menu-main__item-mobile {
+  display: none !important;
 }
 .menu-main__item-dropdown {
   width: 100%;
@@ -11587,6 +11605,9 @@ body {
   width: 100%;
   z-index: 9999;
 }
+.header__menu-fixed .menu-main__item {
+  padding-top: 0.5rem;
+}
 .header__icon-menu {
   display: inline-block;
   line-height: 8rem;
@@ -11621,6 +11642,18 @@ body {
   float: right;
   display: inline-block;
   line-height: 8rem;
+}
+.header__logout-mobile {
+  line-height: 6.5rem;
+  margin-right: 2rem;
+}
+.header__logout-mobile a {
+  color: #fff;
+  opacity: 1;
+}
+.header__logout-mobile a:hover {
+  opacity: 0.9;
+  color: #fff;
 }
 .header__logout-fixed {
   position: fixed;

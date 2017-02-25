@@ -32,6 +32,9 @@ header.header
         .menu-main
           nav.menu-main__nav
             .navbar-header
+              .header__logout.header__logout-mobile.hidden-lg.hidden-md.hidden-sm.pull-right
+                a(href='#0').icon-menu__link
+                  i.fa.fa-sign-out(aria-hidden='true')
               .header__icon-menu.header__icon-menu-mobile.hidden-lg.hidden-md.hidden-sm.pull-right
                 ul.icon-menu.clearfix
                   each icon in icons
@@ -50,6 +53,16 @@ header.header
                   +icon('fa-search')
             #menu-main.collapse.navbar-collapse
               ul.menu-main__list.pull-right.clearfix
+                li.menu-main__item.menu-main__item-mobile.clearfix
+                  .header__logout.header__logout-mobile
+                    a(href='#0').icon-menu__link
+                      i.fa.fa-sign-out(aria-hidden='true')
+                  .header__icon-menu.header__icon-menu-mobile
+                    ul.icon-menu.clearfix
+                      each icon in icons
+                        li.icon-menu__item
+                          a(href=icon.u class=icon.cl).icon-menu__link
+                            i.fa(class=icon.c aria-hidden='true')
                 each item in menu
                   if ( !item.s )
                     li.menu-main__item

@@ -423,6 +423,8 @@
             var menu$  = $('.header__menu'),
                 offset = menu$.offset().top;
 
+            console.log(offset);
+
             $(window).scroll(function () {
                 var windowScroll = $(window).scrollTop();
 
