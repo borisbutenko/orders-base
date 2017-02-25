@@ -237,6 +237,37 @@
 
         })($);
 
+        /**
+         * Filter's menu
+         */
+        (function($) {
+
+            var menu$  = $('.header__menu'),
+                offset = menu$.offset().top;
+
+            $(window).scroll(function () {
+                var windowScroll = $(window).scrollTop();
+
+                fixedMenu(windowScroll);
+            });
+
+            fixedMenu($(window).scrollTop());
+
+            function fixedMenu(windowScroll) {
+                if (windowScroll > offset) {
+                    menu$.addClass('header__menu-fixed');
+                    $('.header__icon-menu').addClass('header__icon-menu-fixed');
+                    $('.header__logout').addClass('header__logout-fixed');
+                }
+                else {
+                    menu$.removeClass('header__menu-fixed');
+                    $('.header__icon-menu').removeClass('header__icon-menu-fixed');
+                    $('.header__logout').removeClass('header__logout-fixed');
+                }
+            }
+
+        })($);
+
     });
 
 })(jQuery);

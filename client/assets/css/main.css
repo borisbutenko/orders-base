@@ -1,7 +1,9 @@
-@media (max-width: 1200px) {
+@media (min-width: 1600px) {
   .aside-orders-fixed {
-    width: 25rem !important;
+    width: 30vw !important;
   }
+}
+@media (max-width: 1200px) {
   .orders__sort > .pull-right {
     float: left !important;
     margin-left: -0.7rem;
@@ -14,6 +16,9 @@
   }
 }
 @media (max-width: 992px) {
+  .aside-orders-fixed {
+    width: 35vw !important;
+  }
   .section-orders__status {
     margin-top: 2rem !important;
     margin-left: 12rem;
@@ -29,12 +34,8 @@
   .aside-orders-fixed {
     position: relative !important;
     width: auto !important;
+    height: auto !important;
     z-index: 100 !important;
-  }
-  .header__icon-menu {
-    position: absolute;
-    top: 0;
-    right: 2rem;
   }
   .navbar-toggle {
     position: relative;
@@ -10869,7 +10870,7 @@ h6 {
   font-weight: 600;
 }
 main.main {
-  margin-top: 18rem;
+  margin-top: 3rem;
 }
 li.picker-switch {
   display: none;
@@ -11211,6 +11212,10 @@ a:focus {
 .select + .select2 .select2-selection:focus {
   outline: none;
 }
+.select2-container,
+.daterangepicker {
+  z-index: 9999 !important;
+}
 .select2-container--open .select2-selection {
   background-color: #0078a6;
 }
@@ -11375,12 +11380,12 @@ a:focus {
 }
 .aside-orders-fixed {
   position: fixed;
-  top: 0;
+  top: 6.5rem;
   left: 0;
-  width: 33rem;
   z-index: 5000;
   background: #fff;
-  height: 100%;
+  width: 26vw;
+  height: 100vh;
 }
 .section-orders {
   position: relative;
@@ -11495,9 +11500,6 @@ a:focus {
   font-weight: 600;
 }
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 5000;
   background: #fff;
   width: 100%;
 }
@@ -11508,9 +11510,25 @@ a:focus {
   height: 7rem;
   background-color: #0078a6;
 }
+.header__menu-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  height: 8.5rem;
+  padding-top: 2rem;
+}
 .header__icon-menu {
   display: inline-block;
   line-height: 8rem;
+}
+.header__icon-menu-fixed {
+  position: fixed;
+  z-index: 10000;
+  line-height: 0;
+  top: 1rem !important;
+  right: 6rem !important;
+  left: unset !important;
 }
 .header__icon-menu-login {
   width: 100%;
@@ -11522,6 +11540,13 @@ a:focus {
   float: right;
   display: inline-block;
   line-height: 8rem;
+}
+.header__logout-fixed {
+  position: fixed;
+  z-index: 10000;
+  line-height: 0;
+  top: 1rem;
+  right: 1rem;
 }
 .user-header {
   position: relative;

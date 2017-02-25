@@ -1,7 +1,4 @@
 .header
-  position: fixed
-  top: 0
-  z-index: 5000
   background: #fff
   width: 100%
   &__panel
@@ -9,9 +6,23 @@
   &__menu
     height: 7rem
     background-color: #0078a6
+    &-fixed
+      position: fixed
+      top: 0
+      width: 100%
+      z-index: 9999
+      height: 8.5rem
+      padding-top: 2rem
   &__icon-menu
     display: inline-block
     line-height: 8rem
+    &-fixed
+      position: fixed
+      z-index: 10000
+      line-height: 0
+      top: 1rem !important
+      right: 6rem !important
+      left: unset !important
     &-login
       width: 100%
   &__user
@@ -20,6 +31,12 @@
     float: right
     display: inline-block
     line-height: 8rem
+    &-fixed
+      position: fixed
+      z-index: 10000
+      line-height: 0
+      top: 1rem
+      right: 1rem
 
 .user-header
   position: relative

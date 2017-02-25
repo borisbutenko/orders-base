@@ -1,6 +1,8 @@
-@media (max-width: 1200px)
+@media (min-width: 1600px)
   .aside-orders-fixed
-    width: 25rem !important
+    width: 30vw !important
+
+@media (max-width: 1200px)
 
   .orders__sort > .pull-right
     float: left !important
@@ -13,6 +15,9 @@
     right: 3.5rem !important
 
 @media (max-width: 992px)
+  .aside-orders-fixed
+    width: 35vw !important
+
   .section-orders__status
     margin-top: 2rem !important
     margin-left: 12rem
@@ -27,12 +32,13 @@
   .aside-orders-fixed
     position: relative !important
     width: auto !important
+    height: auto !important
     z-index: 100 !important
 
-  .header__icon-menu
-    position: absolute
-    top: 0
-    right: 2rem
+  //.header__icon-menu
+  //  position: absolute
+  //  top: 0
+  //  right: 2rem
 
   .navbar-toggle
     position: relative
@@ -104,12 +110,12 @@
 
 @media (max-width: 400px)
   .header__icon-menu
+    &-login a
+      font-size: 1.3rem !important
     position: absolute
     top: 7.5rem !important
     left: -5rem !important
     right: 0 !important
-    &-login a
-      font-size: 1.3rem !important
 
   .navbar-toggle
     top: .8rem !important
