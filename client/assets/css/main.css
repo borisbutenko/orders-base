@@ -94,6 +94,10 @@
   }
 }
 @media (max-width: 500px) {
+  .pager>li>a {
+    font-size: 1.2rem !important;
+    padding: 0.5rem 0.7rem !important;
+  }
   .header__logout-mobile {
     display: none !important;
   }
